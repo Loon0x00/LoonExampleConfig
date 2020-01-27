@@ -1,0 +1,10 @@
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+^https?://union.click.jd.com/jda? http://union.click.jd.com/jda?adblock= header
+
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+(?<=(carrier|sys)_region=)CN JP 307
+(?<=version_code=)\d{1,}.\d{1}\.\d{1} 8.0.0 307
+
+^https?://api\d?.tiktokv.com/api/ad/ - reject
+^https?://api\d?.musical.ly/api/ad/ - reject
