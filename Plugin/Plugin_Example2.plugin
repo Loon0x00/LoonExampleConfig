@@ -1,0 +1,43 @@
+#example2 plugin
+#Rule：策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
+
+[Rule]
+USER-AGENT,Argo*
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,netflix.com
+DOMAIN-SUFFIX,netflix.net
+DOMAIN-SUFFIX,nflxext.com
+DOMAIN-SUFFIX,nflximg.com
+DOMAIN-SUFFIX,nflximg.net
+DOMAIN-SUFFIX,nflxso.net
+DOMAIN-SUFFIX,nflxvideo.net
+DOMAIN-SUFFIX,netflixdnstest0.com
+DOMAIN-SUFFIX,netflixdnstest1.com
+DOMAIN-SUFFIX,netflixdnstest2.com
+DOMAIN-SUFFIX,netflixdnstest3.com
+DOMAIN-SUFFIX,netflixdnstest4.com
+DOMAIN-SUFFIX,netflixdnstest5.com
+DOMAIN-SUFFIX,netflixdnstest6.com
+DOMAIN-SUFFIX,netflixdnstest7.com
+DOMAIN-SUFFIX,netflixdnstest8.com
+DOMAIN-SUFFIX,netflixdnstest9.com
+IP-CIDR,23.246.0.0/18,PROXY
+IP-CIDR,37.77.184.0/21,PROXY
+IP-CIDR,45.57.0.0/17,PROXY
+IP-CIDR,64.120.128.0/17,PROXY
+IP-CIDR,66.197.128.0/17,PROXY
+IP-CIDR,108.175.32.0/20,PROXY
+IP-CIDR,192.173.64.0/18,PROXY
+IP-CIDR,198.38.96.0/19,PROXY
+IP-CIDR,198.45.48.0/20,PROXY
+
+[Url Rewrite]
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+
+[Script]
+http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+
+[MITM]
+hostname = ios.prod.ftl.netflix.com
