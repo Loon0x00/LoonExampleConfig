@@ -40,7 +40,7 @@ function Notify_Demo()
     TItle = "我是主标题";
     SubTitle  = "我是子标题";
     Content = "我是要推送的内容";
-    $noification.post(Title,SubTitle,Content);
+    $notification.post(Title,SubTitle,Content);
 }
 //Call Function
 Notify_Demo()
@@ -184,7 +184,7 @@ API名称:$response
 API属性:headers....等等
 本API只有在匹配了正则表达式匹配的URL链接才会被触发,直接运行会报错。
 tips:非cron类型脚本,都需要在MITM中添加要解密的域名,否则不会生效;您需要添加正则表达式
-使用$request.url可以获取到请求链接等信息,如果您不知道$response中包含哪些信息
+如果您不知道$response中包含哪些信息
 可以使用console.log($response)输出其完整的信息
 注意：如果要修改消息体的内容,需要打开Body开关
 ```
