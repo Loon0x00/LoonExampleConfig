@@ -1,0 +1,29 @@
+#ss
+ss1 = Shadowsocks,example.com,443,aes-128-gcm,"password",fast-open=false
+ss2 = Shadowsocks,example2.com,443,chacha20,"password",fast-open=true
+#ss+simple obfs
+ssObfs1 = Shadowsocks,example.com,80,aes-128-gcm,"password",obfs-name=http,obfs-host=www.micsoft.com,fast-open=true
+ssObfs2 = Shadowsocks,example.com,443,aes-128-gcm,"password",obfs-name=tls,obfs-host=www.micsoft.com,fast-open=true
+#ssr
+ssr1 = ShadowsocksR,example.com,443,aes-256-cfb,"password",orig,{},http_simple,{download.windows.com}
+ssr2 = ShadowsocksR,example.com,10076,aes-128-cfb,"password",auth_chain_a,{9555:loon},http_post,{download.windows.com}
+ssr3 = ShadowsocksR,example.com,10076,chacha20,"password",auth_aes128_md5,{9555:loon},tls1.2_ticket_auth,{download.windows.com}
+ssr4 = ShadowsocksR,example.com,10076,chacha20-ietf,"password",auth_aes128_sha1,{9555:loon},plain,{}
+#http
+http1 = http,example.com,80
+http2 = http,example.com,80,username,"password"
+#https
+https1 = https,example.com,443
+https2 = https,example.com,443,username,"password"
+https3 = https,example.com,443,username,"password",skip-cert-verify:true,tls-name:example.com
+#vmess+tcp
+vmess1 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport:tcp,path:/,host:v3-dy-y.ixigua.com,over-tls:false
+#vmess+tcp+tls
+vmess2 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport:tcp,path:/,host:v3-dy-y.ixigua.com,over-tls:true,tls-name:example.com,skip-cert-verify:true
+#vmess+ws
+vmess3 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport:ws,path:/,host:v3-dy-y.ixigua.com,over-tls:false
+#vmess+wss
+vmess4 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport:ws,path:/,host:v3-dy-y.ixigua.com,over-tls:true,tls-name:example.com,skip-cert-verify:true
+#trojan
+trojan1 = trojan,example.com,"password",skip-cert-verify:false,tls-name:example.com
+trojan2 = trojan,example.com,"password",skip-cert-verify:true,tls-name:example.com
