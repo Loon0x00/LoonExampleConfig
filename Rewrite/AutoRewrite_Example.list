@@ -1,10 +1,17 @@
-^https?://(www.)?g.cn https://www.google.com 302
-^https?://(www.)?google.cn https://www.google.com 302
-^https?://union.click.jd.com/jda? http://union.click.jd.com/jda?adblock= header
 
-(.*video_id=\w{32})(.*watermark=)(.*) $1 302
-(?<=(carrier|sys)_region=)CN JP 307
-(?<=version_code=)\d{1,}.\d{1}\.\d{1} 8.0.0 307
+(.*video_id=\w{32})(.*watermark=)(.*) 302 $1
+(?<=(carrier|sys)_region=)CN 307 JP
+(?<=version_code=)\d{1,}.\d{1}\.\d{1} 307 8.0.0
 
-^https?://api\d?.tiktokv.com/api/ad/ - reject
-^https?://api\d?.musical.ly/api/ad/ - reject
+^http://www\.google\.cn header http://www.google.com
+^http://example.com 302 ^https://example.com
+^http://example.com 307 ^https://example.com
+^http://example.com reject
+^http://example.com reject-200
+^http://example.com reject-img
+^http://example.com reject-dict
+^http://example.com reject-array
+ 
+^http://example.com header-add Connection keep-alive
+^http://example.com header-del Cookie
+^http://example.com header-replace User-Agent Unknown
