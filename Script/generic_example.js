@@ -4,7 +4,7 @@
 */
 
 //[script]
-//generic script-path=generic_example.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system
+//generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system
 
 // $environment.params with input params
 console.log($environment.params);
