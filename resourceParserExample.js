@@ -18,5 +18,5 @@ console.log(url);
 
 if (resourceType == 0) {
     //$done(解析后的资源字符串)
-    $done(resource);
+    $done("# generate by ResourceParserExample.js\n" + resource);
 }
