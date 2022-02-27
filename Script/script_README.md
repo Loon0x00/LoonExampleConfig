@@ -45,8 +45,6 @@ http-response ^https?:\/\/(www.)?(example)\.com script-path=https://example.com/
 - $done()方法参数说明：
     - $done(): 不传任何参数，表示放弃该请求，请求连接会直接断开
     - $done({}): 空js对象，请求继续，任何请求参数不会有任何变化
-    - $done({url:"https://new.example.com/"}): 替换原来的url
-    - $done({headers:{}}): 替换原来的request headers
     - $done({response:{
         status:200,
         headers:{},//response headers
