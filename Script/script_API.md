@@ -152,3 +152,9 @@ data: String类型，响应body
 `$httpClient.options(params, function(errormsg,response,data){})`: 发起options请求，参数、callback参数同get
 
 `$httpClient.patch(params, function(errormsg,response,data){})`: 发起patch请求，参数、callback参数同get
+
+## 其他
+
+- **$done()**
+
+在一般的脚本中，调用$done()表示结束脚本的执行，loon内部会进行脚本资源的释放，所以为了loon的js资源请在脚本结束时调用$done()释放资源；在http-request、http-response类型的脚本中，$done()的调用请参考相关脚本类型的说明：[Loon脚本类型](https://github.com/Loon0x00/LoonExampleConfig/blob/master/Script/script_README.md)
