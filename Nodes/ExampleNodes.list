@@ -30,4 +30,4 @@ vmess3 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb4578
 vmess4 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=ws,path=/,host=v3-dy-y.ixigua.com,over-tls=true,tls-name=example.com,skip-cert-verify=true
 #trojan
 trojan1 = trojan,example.com,443,"password",skip-cert-verify=false,tls-name=example.com
-trojan2 = trojan,example.com,443,"password",skip-cert-verify=true,tls-name=example.com
+trojan2 = trojan,example.com,443,"password",transport=ws,path=/,host=micsoft.com,skip-cert-verify=true,tls-name=example.com,udp=true
