@@ -1,19 +1,17 @@
 /**
  * generic script example
  * Reference: https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js
+ * 
+ * [script]
+ * generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system
 */
-
-//[script]
-//generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system
 
 // $environment.params with input params
 console.log($environment.params);
-// var url = "http://ip-api.com/json";
 var url = "https://api.ip.sb/geoip";
 
 var inputParams = $environment.params;
 var nodeName = inputParams.node;
-// var nodeDesc = params.node;
 
 /**
  * node: Specify network activity on this node
@@ -28,8 +26,6 @@ const paras = ["ip","isp","country_code","city"];
 const paran = ["IP","ISP","地区","城市"];
 
 $httpClient.get(requestParams, (error, response, data) => {
-    // $done({"title":"IP Location","message":data});
-    // $done({"title":"The Title","htmlMessage":"html content"});
     if (error) {
         message = "</br></br>🛑 查询超时"
         message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`

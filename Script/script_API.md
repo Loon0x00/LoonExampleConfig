@@ -121,6 +121,7 @@ $notification.post("title","subtitle","content",attach)
 //params为请求参数：如下
 {
     url:"https://example.com/",
+    timeout: 2000, //请求超时，单位ms
     headers:{
         Content-Type:"application/json"
     },
