@@ -2,7 +2,7 @@
  * 本脚本实现HTTP代理协议，可用于Loon的自定义协议（custom类型）
  * 使用方式：
  * [Proxy]
- * customHttp = custom, remoteAddress, port, script-path=
+ * customHttp = custom, remoteAddress, port, script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/http.js
  * 
  * 脚本：
  * 全局参数 $session 表示当前的一个tcp会话，一个session对象样例
