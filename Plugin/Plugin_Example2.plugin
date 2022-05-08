@@ -1,5 +1,7 @@
-#example2 plugin
-#Rule：策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
+#!name= Loon example plugin2
+#!desc= Rule：策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
+#!author = Loon0x00
+#!homepage = https://github.com/Loon0x00
 
 [Rule]
 USER-AGENT,Argo*

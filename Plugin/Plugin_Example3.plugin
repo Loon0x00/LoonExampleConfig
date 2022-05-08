@@ -1,3 +1,3 @@
-# plugin example3
+#!name = plugin example3
 [Script]
 generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system

@@ -1,4 +1,9 @@
-#example plugin
+#!name= Loon example plugin1
+#!desc= Netflix评分
+#!author= Loon0x00
+#!homepage= https://github.com/Loon0x00
+#!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+
 [Url Rewrite]
 ^https?://(www.)?g.cn https://www.google.com 302
 ^https?://(www.)?google.cn https://www.google.com 302
