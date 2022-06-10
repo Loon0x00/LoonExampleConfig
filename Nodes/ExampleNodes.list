@@ -30,27 +30,27 @@ https2 = https,example.com,443,username,"password"
 https3 = https,example.com,443,username,"password",skip-cert-verify=true,tls-name=example.com
 
 #vmess+tcp
-# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=tcp，alertId=alertId
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=tcp，alertId=alertId（默认0，表示开启aead）
 vmess1 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=tcp,alertId=0,over-tls=false
 
 #vmess+tcp+tls
-# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=tcp，alertId=alertId，over-tls=是否启用TLS，tls-name=SNI，skip-cert-verify=是否跳过证书校验（默认否）
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=tcp，alertId=alertId（默认0，表示开启aead），over-tls=是否启用TLS，tls-name=SNI，skip-cert-verify=是否跳过证书校验（默认否）
 vmess2 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=tcp,alertId=0,path=/,host=v3-dy-y.ixigua.com,over-tls=true,tls-name=example.com,skip-cert-verify=true
 
 #vmess+ws
-# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=ws，alertId=alertId，path=websocket握手header中的path，host=websocket握手header中的host
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=ws，alertId=alertId（默认0，表示开启aead），path=websocket握手header中的path，host=websocket握手header中的host
 vmess3 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=ws,alertId=0,path=/,host=v3-dy-y.ixigua.com,over-tls=false
 
 #vmess+wss
-# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=ws，alertId=alertId，path=websocket握手header中的path，host=websocket握手header中的host，over-tls=是否启用TLS，tls-name=SNI，skip-cert-verify=是否跳过证书校验（默认否）
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=ws，alertId=alertId（默认0，表示开启aead），path=websocket握手header中的path，host=websocket握手header中的host，over-tls=是否启用TLS，tls-name=SNI，skip-cert-verify=是否跳过证书校验（默认否）
 vmess4 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=ws,alertId=0,path=/,host=v3-dy-y.ixigua.com,over-tls=true,tls-name=example.com,skip-cert-verify=true
 
 #vmess+http
-# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=http，alertId=alertId，path=httpheader中的path，host=httpheader的host
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=http，alertId=alertId（默认0，表示开启aead），path=httpheader中的path，host=httpheader的host
 vmess5 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=http,alertId=0,path=/,host=v3-dy-y.ixigua.com,over-tls=false
 
 #vmess+http+tls
-# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=http，alertId=alertId，path=httpheader中的path，host=httpheader的host，over-tls=是否启用TLS，tls-name=SNI，skip-cert-verify=是否跳过证书校验（默认否）
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，transport(传输方式)=http，alertId=alertId（默认0，表示开启aead），path=httpheader中的path，host=httpheader的host，over-tls=是否启用TLS，tls-name=SNI，skip-cert-verify=是否跳过证书校验（默认否）
 vmess6 = vmess,example.com,10086,aes-128-gcm,"52396e06-041a-4cc2-be5c-8525eb457809",transport=http,alertId=0,path=/,host=v3-dy-y.ixigua.com,over-tls=true,tls-name=example.com,skip-cert-verify=true
 
 #VLESS+tcp
