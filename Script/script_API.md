@@ -159,3 +159,11 @@ data: String类型，响应body
 - **$done()**
 
 在一般的脚本中，调用$done()表示结束脚本的执行，loon内部会进行脚本资源的释放，所以为了loon的js资源请在脚本结束时调用$done()释放资源；在http-request、http-response类型的脚本中，$done()的调用请参考相关脚本类型的说明：[Loon脚本类型](https://github.com/Loon0x00/LoonExampleConfig/blob/master/Script/script_README.md)
+
+- **$envirnoment**
+
+仅用于generic类型的脚本中，当generic类型的脚本运用于某个节点时，`$envirnoment`对象有如下几个属性
+
+`$environment.params.node`: 表示节点名称（build 410版本后推荐用nodeInfo）
+
+`$environment.params.nodeInfo`: 节点简洁信息（为了安全起见，不会返回所有节点信息）
