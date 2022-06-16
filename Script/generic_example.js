@@ -10,6 +10,17 @@
 console.log($environment.params);
 var url = "https://api.ip.sb/geoip";
 
+/**
+ * build 411 版本后 添加$environment.params.nodeInfo对象，表示简单的节点信息
+ * 注意：由于安全限制，nodeInfo对象中仅有一下信息
+ {
+    address = "example.com";
+    name = "节点名称";
+    port = 12443;
+    tls = 1;
+    type = Vmess;
+}
+ */
 var inputParams = $environment.params;
 var nodeName = inputParams.node;
 
