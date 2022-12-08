@@ -4,8 +4,7 @@
 #!input = appName
 #!input = author
 #!select = appType,tool,social,health,sport
-#!select = prica,0.99,1.99,4.99
+#!select = price,0.99,1.99,4.99
 
-[Url Rewrite]
-^https?://(www.)?g.cn https://www.google.com 302
-^https?://(www.)?google.cn https://www.google.com 302
+[Script]
+cron "0/24 * * * *" script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/plugin_example.js,tag = pluginExample, enable=true
