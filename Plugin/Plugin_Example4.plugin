@@ -5,3 +5,7 @@
 #!input = author
 #!select = appType,tool,social,health,sport
 #!select = prica,0.99,1.99,4.99
+
+[Url Rewrite]
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
