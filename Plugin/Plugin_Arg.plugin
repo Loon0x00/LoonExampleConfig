@@ -1,0 +1,21 @@
+#!name = 带参数的插件Demo
+#!desc = 这是一个可设定参数的插件，适用于Loon 3.2.1(build 733 +)
+#!author = Loon0x00
+#!homePage = https://nsloon.com
+#!data = 2024-08-09
+#!icon = blob:https://github.com/523219c4-a229-4987-b388-2bd4ec0f9e25
+#!system = ios,tvos,macos
+#!systrm_version = 15.0
+#!loon_version = 3.2.1(734)
+#!tag = 官方,Demo
+
+[Arguement]
+appName = input,"Loon",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
+
+[Script]
+http-request ^https://nsloon\.app script-path = https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/plugin_arg.js,arguement=[{appName},{appCategory},{isSupportChinese}]
+
+[MITM]
+nsloon.app
