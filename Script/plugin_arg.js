@@ -6,6 +6,6 @@ let appName = $arguement.appName
 let category = $arguement.appCategory
 let isC = $arguement.isSupportChinese
 
-log($arguement)
+console.log($arguement)
 
 $done({});
