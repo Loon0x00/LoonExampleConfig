@@ -1,11 +1,11 @@
 /**
- * 这是一个读取插件中用户配置参数的脚本，通过 $arguement.xxx 获取配置的相关参数
+ * 这是一个读取插件中用户配置参数的脚本，通过 $argument.xxx 获取配置的相关参数
  */
 
-let appName = $arguement.appName
-let category = $arguement.appCategory
-let isC = $arguement.isSupportChinese
+let appName = $argument.appName
+let category = $argument.appCategory
+let isC = $argument.isSupportChinese
 
-console.log($arguement)
+console.log($argument)
 
 $done({});
