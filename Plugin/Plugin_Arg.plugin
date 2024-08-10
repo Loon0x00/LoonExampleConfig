@@ -9,13 +9,13 @@
 #!loon_version = 3.2.1(734)
 #!tag = 官方,Demo
 
-[Arguement]
+[Argument]
 appName = input,"Loon",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择app是否支持中文
 
 [Script]
-http-request ^https://nsloon\.app script-path = https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/plugin_arg.js,arguement=[{appName},{appCategory},{isSupportChinese}]
+http-request ^https://nsloon\.app script-path = https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/plugin_arg.js,argument=[{appName},{appCategory},{isSupportChinese}]
 
 [MITM]
 nsloon.app
