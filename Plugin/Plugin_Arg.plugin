@@ -5,7 +5,7 @@
 #!data = 2024-08-09
 #!icon = https://raw.githubusercontent.com/Loon0x00/Loon0x00.github.io/main/static/img/loon.png
 #!system = ios,tvos,macos
-#!systrm_version = 15.0
+#!system_version = 15.0
 #!loon_version = 3.2.1(734)
 #!tag = 官方,Demo
 
