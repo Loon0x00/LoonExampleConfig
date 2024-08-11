@@ -1,6 +1,6 @@
 #!name = 带参数的插件Demo
 #!desc = 这是一个可设定参数的插件，适用于Loon 3.2.1(build 733 +)
-#!author = Loon0x00
+#!author = Loon0x00[https://github.com/Loon0x00/LoonExampleConfig]
 #!homePage = https://nsloon.com
 #!data = 2024-08-09
 #!icon = https://raw.githubusercontent.com/Loon0x00/Loon0x00.github.io/main/static/img/loon.png
