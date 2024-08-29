@@ -9,5 +9,5 @@ cron "0 8 * * *" script-path=https://raw.githubusercontent.com/Loon0x00/LoonExam
 */
 
 console.log('Start JS');
-$notification.post("title","subtitle","body");
+$notification.post("Cron测试脚本","这是一个测试cron的脚本","仅供测试使用，不要安装");
 $done();
