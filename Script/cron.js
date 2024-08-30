@@ -11,7 +11,7 @@ cron "0 8 * * *" script-path=https://raw.githubusercontent.com/Loon0x00/LoonExam
 
 console.log('Start cron JS Demo');
 
-let appName = $argument.appName; //这个参数是从插件配置中获取到的，见插件：https://github.com/Loon0x00/LoonExampleConfig/blob/master/Plugin/Plugin_Arg.plugin
+let appName = $argument.appName; //这个参数是从插件配置中获取到的，见插件：https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Plugin/Plugin_Arg.plugin
 console.log(appName);
 
 $notification.post("Cron测试脚本","这是一个测试cron的脚本","仅供测试使用，不要安装");
