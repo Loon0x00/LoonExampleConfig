@@ -17,4 +17,4 @@ resourceUrlOnly = switch,true,tag=忽略 Loon 自身解析数据,desc=忽略 Loo
 age-secret-key = input,"",tag=age 加密解密,desc=age 加密解密功能 可查看 https://t.me/zhetengsha/5876
 
 [Script]
-generic script-path=node_parser_ex.js,tag=NodeParser,timeout=10,,argument=[{UA},{resourceUrlOnly},{age-secret-key}]
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/refs/heads/master/Script/node_parser_ex.js,tag=NodeParser,timeout=10,,argument=[{UA},{resourceUrlOnly},{age-secret-key}]
